@@ -1,0 +1,29 @@
+#:kivy 1.0.9
+
+<LineGame>:
+
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+    AnchorLayout:
+        anchor_x:'center'
+        anchor_y:'center'
+        pos: self.parent.pos
+        size: self.parent.size
+        padding:45
+        BoxLayout:
+            id: g_box
+            orientation: 'horizontal'
+            size: self.minimum_size
+            size_hint: 0.9, None
+            canvas.before:
+                Color:
+                    rgba: 0, 1, 1, 1
+
+<Atom>:
+    canvas.before:
+        Color:
+            rgba: self.color
+        Rectangle:
+            pos: self.pos
+            size: 5, 5
